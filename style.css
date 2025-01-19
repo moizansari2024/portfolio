@@ -1,0 +1,100 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Outfit:wght@100..900&family=Passion+One:wght@400;700;900&family=Playwrite+IN:wght@100..400&family=Quicksand:wght@300..700&family=Raleway:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap'); */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: black;
+    color: white;
+}
+
+.container {}
+
+
+.header-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    padding: 16px;
+}
+
+
+.logo {}
+
+
+.logo p {
+    /* font-family: cursive ,sans-serif;
+     */
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+    font-size: 45px;
+    color: rgb(34, 163, 206);
+
+}
+
+
+.nav-links {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 50px;
+}
+
+
+.nav-links a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 18px;
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+}
+
+.nav-links a:hover {
+    color: rgb(34, 163, 206);
+    text-decoration: underline;
+}
+
+
+.my-intro {
+    margin: 70px 16px 0px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.paragraph {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.paragraph p {
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+    font-size: 45px;
+    margin: 0px 0px 6px 0px;
+
+}
+
+
+
+.name {
+    color: rgb(34, 163, 206);
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+    font-size: 45px;
+}
+
+
+
+.code-image img{
+    height: 250px;
+    width: 510px;
+}
