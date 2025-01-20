@@ -10,9 +10,13 @@
 body {
     background-color: black;
     color: white;
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
 }
 
-.container {}
+.container {
+    margin: 0px 10px 0px 10px;
+}
 
 
 .header-section {
@@ -20,7 +24,15 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding: 16px;
+    padding-top: 13px;
+    position: sticky;
+    top: 0px;
+    z-index: 99999999;
+    /* background-color: ; */
+   /* background-color: rgba(0, 0, 0, 0, 5);
+    */
+    /* box-shadow: 8 8 50 red; */
+
 }
 
 
@@ -28,13 +40,15 @@ body {
 
 
 .logo p {
-    /* font-family: cursive ,sans-serif;
-     */
-    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    ;
-    font-size: 45px;
-    color: rgb(34, 163, 206);
 
+    font-size: 45px;
+    color: #0ea5e9;
+
+}
+
+.logo p:hover {
+    color: #0ea5e9;
+    text-decoration: underline;
 }
 
 
@@ -50,18 +64,18 @@ body {
     text-decoration: none;
     color: #ffffff;
     font-size: 18px;
-    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    ;
+
 }
 
 .nav-links a:hover {
-    color: rgb(34, 163, 206);
+    /* color: rgb(34, 163, 206); */
+    color: #0ea5e9;
     text-decoration: underline;
 }
 
 
 .my-intro {
-    margin: 70px 16px 0px 16px;
+    margin: 70px 0px 0px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -71,30 +85,104 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
-    gap: 10px;
+    gap: 7px;
 }
 
 
 .paragraph p {
-    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    ;
+
     font-size: 45px;
     margin: 0px 0px 6px 0px;
 
 }
 
+.div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
 
+.me {
+
+    font-size: 45;
+
+}
 
 .name {
-    color: rgb(34, 163, 206);
-    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
-    ;
+    color: #0ea5e9;
     font-size: 45px;
 }
 
 
 
-.code-image img{
+.code-image img {
     height: 250px;
     width: 510px;
+}
+
+
+.experince {
+    margin: 60px 0px 190px 0px;
+}
+
+.experince p {
+    color: #a2a5aa;
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+    line-height: 28px;
+    font-size: 19px;
+    margin: 0px 0px 35px 0px;
+
+}
+
+.experince span {
+    color: #0ea5e9;
+    font-size: 17px;
+    /* margin: 0px 0px 0px 0px; */
+
+}
+
+.about-me {}
+
+.about-me p {
+    font-size: 50px;
+    color: #a2a5aa;
+    padding: 0px 0px 50px 0px;
+    color: #ffffff;
+}
+
+.about-me span {
+    font-size: 20px;
+    color: #0ea5e9;
+    font-weight: bold;
+
+}
+
+
+.about-me img {
+    height: 25px;
+    width: 25px;
+    margin: 0px 0px -6px 0px;
+
+}
+
+.details {
+    margin: 20px 0px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.first {
+    font-size: 18px;
+    line-height: 25px;
+    margin: 0px 0px 0px 0px;
+    color: #a2a5aa;
+
+
+}
+
+
+.College {
+    color: #0ea5e9;
+
 }
