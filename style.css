@@ -12,10 +12,17 @@ body {
     color: white;
     font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     ;
+
+}
+
+
+.max-container {
+    margin: 0px auto;
+    max-width: 1024;
 }
 
 .container {
-    margin: 0px 10px 0px 10px;
+    padding: 0px 20px 0px 20px;
 }
 
 
@@ -24,14 +31,15 @@ body {
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    padding-top: 13px;
+    padding: 10px;
     position: sticky;
     top: 0px;
     z-index: 99999999;
-    /* background-color: ; */
-   /* background-color: rgba(0, 0, 0, 0, 5);
-    */
-    /* box-shadow: 8 8 50 red; */
+    background: rgb(2 6 8 / 98%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(14, 165, 233, 0.8);
+
 
 }
 
@@ -68,14 +76,13 @@ body {
 }
 
 .nav-links a:hover {
-    /* color: rgb(34, 163, 206); */
     color: #0ea5e9;
     text-decoration: underline;
 }
 
 
 .my-intro {
-    margin: 70px 0px 0px 0px;
+    margin: 120px 0px 0px 0px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -117,7 +124,7 @@ body {
 
 .code-image img {
     height: 250px;
-    width: 510px;
+    width: 490px;
 }
 
 
@@ -133,56 +140,178 @@ body {
     font-size: 19px;
     margin: 0px 0px 35px 0px;
 
+
 }
 
 .experince span {
     color: #0ea5e9;
     font-size: 17px;
-    /* margin: 0px 0px 0px 0px; */
+    /* padding: 0px 0px 0px 20px; */
 
 }
 
-.about-me {}
+.about-me {
+    margin: 0px 0px 35px 0px;
+}
 
 .about-me p {
     font-size: 50px;
-    color: #a2a5aa;
-    padding: 0px 0px 50px 0px;
     color: #ffffff;
 }
 
-.about-me span {
+
+
+.flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.hello {
+    padding: 0px 0px 0px 20px;
+}
+
+.hello span {
     font-size: 20px;
     color: #0ea5e9;
     font-weight: bold;
 
 }
 
+.hello p {
+    color: #a2a5aa;
+    margin: 15px 0px 0px 0px;
+    line-height: 26px;
+}
 
-.about-me img {
+
+.hello img {
     height: 25px;
     width: 25px;
     margin: 0px 0px -6px 0px;
-
 }
 
-.details {
-    margin: 20px 0px 0px 0px;
-    display: flex;
-    justify-content: space-between;
-}
-
-.first {
-    font-size: 18px;
-    line-height: 25px;
-    margin: 0px 0px 0px 0px;
-    color: #a2a5aa;
-
-
-}
 
 
 .College {
     color: #0ea5e9;
 
 }
+
+
+
+.details {
+    margin: 0px 0px 0px 0px;
+}
+
+.details strong {
+    color: #0ea5e9;
+}
+
+
+.details a {
+    color: #0ea5e9;
+    text-decoration: none;
+}
+
+.list {
+    padding: 25px 0px 0px 22px;
+
+}
+
+
+.list li {
+    color: #a2a5aa;
+}
+
+.projects {
+    text-align: center;
+    /* color: #a2a5aa; */
+    color: #ffffff;
+    font-size: 45px;
+    margin: 160px 0px 60px 0px;
+}
+
+
+.project-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 100px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0px 30px 0px 30px
+ 
+
+}
+
+
+.card-one {
+
+
+    border-radius: 10px;
+    height: 250px;
+    width: 300px;
+    /* border: 4px solid; */
+
+
+}
+
+.card-one img {
+    height: 100%;
+    width: 100%;
+ 
+
+
+}
+
+
+.card-two{
+    border-radius: 10px;
+    height: 250px;
+    width: 300px;
+
+}
+
+
+
+.card-two img {
+    height: 100%;
+    width: 100%;
+}
+
+.discription{
+    
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 0 30px rgba(58, 125, 192, 0.8);
+    border-radius: 10px;
+        padding: 5px 10px 0px 10px;
+    margin: 0px -5px 0px -5px
+
+}
+
+.discription a{
+    color: #a2a5aa;
+    text-align: center;
+    text-decoration: none;
+   
+  
+}
+
+.discription p{
+    color: #a2a5aa;
+}
+
+.github-link{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 27px;
+}
+
+/* .website{
+    
+} */
+
