@@ -36,7 +36,7 @@ body {
     z-index: 99999999;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
-    height: 70px;
+    height: 80px;
 
 
 }
@@ -118,19 +118,19 @@ body {
     font-feature-settings: normal;
     font-variation-settings: normal;
     color: #a2a5aa;
+    /* margin: 0px 44px 0px 0px ; */
 }
 
 
 .paragraph p {
 
-    font-size: 49px;
+    font-size: 45px;
     margin: 0px 0px 6px 0px;
 
 }
 
 .flex-div {
     display: flex;
-    align-items: center;
     gap: 12px;
 
 
@@ -138,19 +138,38 @@ body {
 
 .me {
     font-size: 45;
+    margin: 0px !important;
 
 }
 
 .name {
     color: #0ea5e9;
     font-size: 45px;
+    margin: 0px !important;
 }
+
+.name::after {
+    content: "Moiz Ahmedd";
+    display: inline-block;
+    overflow: hidden;
+    border-right: 1px solid #0ea5e9; /* Cursor effect */
+    white-space: nowrap;
+    animation: typing 2s steps(10) infinite alternate;
+}
+
+@keyframes typing {
+    0% { width: 0; }
+    100% { width: 100%; }
+}
+
+
+
 
 
 
 .code-image img {
     height: 300px;
-    width: 490px;
+    width: 542px;
 }
 
 
@@ -511,18 +530,20 @@ body {
     }
 
     .logo p {
-        font-size: 30px; /* Chhoti screens ke liye font size kam kiya */
+        font-size: 30px;
+        /* Chhoti screens ke liye font size kam kiya */
     }
 
     .nav-links {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 20px;
+        gap: 15px;
     }
 
     .nav-links a {
-        font-size: 14px; /* Font size adjust kiya taake ache se fit ho */
+        font-size: 14px;
+        /* Font size adjust kiya taake ache se fit ho */
     }
 
     .Resume {
@@ -541,7 +562,8 @@ body {
     }
 
     .paragraph p {
-        font-size: 30px; /* Extra small devices ke liye text size adjust kiya */
+        font-size: 30px;
+        /* Extra small devices ke liye text size adjust kiya */
     }
 
     .me,
@@ -551,9 +573,12 @@ body {
 
     .code-image img {
         height: auto;
-        width: 100%; /* Image ko responsive banaya */
-        max-width: 350px; /* Max width set ki taake screen se bahar na jaye */
+        width: 100%;
+        /* Image ko responsive banaya */
+        max-width: 350px;
+        /* Max width set ki taake screen se bahar na jaye */
     }
+
     .experince p {
         font-size: 16px;
         text-align: center;
@@ -566,13 +591,16 @@ body {
     }
 
     .about-me p {
-        font-size: 35px; /* Font size chhota kiya */
+        font-size: 35px;
+        /* Font size chhota kiya */
         text-align: center;
     }
 
     .flex {
-        flex-direction: column; /* Column layout for mobile */
-        gap: 20px; /* Kam gap rakha */
+        flex-direction: column;
+        /* Column layout for mobile */
+        gap: 20px;
+        /* Kam gap rakha */
         text-align: center;
     }
 
@@ -591,6 +619,38 @@ body {
 
     .list {
         padding-top: 10px;
+        margin: 0px 30px 0px 0px ;
+
+        .footer-section {
+            flex-direction: column;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .whats-next h1 {
+            font-size: 1.5rem;
+        }
+
+        .contact-link a {
+            padding: 8px 16px;
+            font-size: 14px;
+        }
+
+        .account-links {
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .account-links a svg {
+            height: 25px;
+            width: 25px;
+        }
+
+        .design-build {
+            font-size: 14px;
+            margin-top: 15px;
+        }
     }
 
     .list li {
@@ -599,7 +659,8 @@ body {
 
     .profile {
         height: auto;
-        width: 80%; /* Image responsive banayi */
+        width: 80%;
+        /* Image responsive banayi */
         max-width: 250px;
     }
 
@@ -609,27 +670,35 @@ body {
     }
 
     .image-line {
-        display: none; /* Image outline chhoti screens pe hide ki */
+        display: none;
+        /* Image outline chhoti screens pe hide ki */
     }
 
     .projects-card-parent {
         display: flex;
-        flex-direction: column; /* Cards ko ek ke neeche ek rakha */
+        flex-direction: column;
+        /* Cards ko ek ke neeche ek rakha */
         align-items: center;
-        gap: 20px; /* Thoda gap diya */
+        gap: 20px;
+        /* Thoda gap diya */
     }
 
     .card {
-        width: 90%; /* Card ko responsive banaya */
-        max-width: 350px; /* Max width di taake zyada wide na ho */
+        width: 90%;
+        /* Card ko responsive banaya */
+        max-width: 350px;
+        /* Max width di taake zyada wide na ho */
         text-align: center;
         /* padding: 15px; */
         border-radius: 10px;
-        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Light shadow for better look */
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        /* Light shadow for better look */
+        background-color: #010a16;
     }
 
     .card-img-top {
-        width: 100%; /* Image ko responsive banaya */
+        width: 100%;
+        /* Image ko responsive banaya */
         height: auto;
         border-radius: 8px;
     }
@@ -642,7 +711,8 @@ body {
     }
 
     .parent-card-text p {
-        font-size: 14px; /* Text size chhota kiya */
+        font-size: 14px;
+        /* Text size chhota kiya */
     }
 
     .web-year {
@@ -697,4 +767,3 @@ body {
     }
 
 }
-
