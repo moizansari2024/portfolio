@@ -11,8 +11,6 @@ body {
 
     background-color: #010a16 !important;
     color: white !important;
-    /* font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif; */
-    ;
 
 }
 
@@ -23,76 +21,105 @@ body {
 }
 
 
+.navbar {
 
-
-.header-section {
+    padding: 10px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 20px;
-    padding: 20px;
+    height: 77px;
+    backdrop-filter: blur(10px);
     position: sticky;
     top: 0px;
     z-index: 99999999;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    height: 80px;
 
 
 }
-
 
 .logo {
-    /* transition-property: auto;
-    transition-duration: 1ms; */
-}
-
-
-.logo p {
-
     font-size: 45px;
-    color: #0ea5e9;
-    margin: 0px !important;
+    text-decoration: none;
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
     transition: transform 0.3s ease, color 0.3s ease;
+    color: #0ea5e9;
+
 
 }
 
-.logo p:hover {
+
+.logo :hover {
 
     transform: scale(1.1);
 
 }
 
-
-.nav-links {
+.menu {
     display: flex;
-    justify-content: space-between;
+    gap: 35px;
     align-items: center;
-    gap: 50px;
+    justify-content: space-between;
+
 }
 
+.menu {
+    display: flex;
+    gap: 35px;
+    align-items: center;
+    justify-content: space-between;
 
+}
 
-.nav-links a {
+.menu a {
+
     text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px;
     color: #a2a5aa;
-    border-radius: 3px;
     transition: transform 0.3s ease, color 0.3s ease;
+    font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
+    ;
+}
+
+.menu a:hover {
+    color: #0ea5e9;
+    text-decoration: underline;
+    transform: scale(1.1);
+    text-decoration: none;
 
 
 }
 
 .Resume {
+    padding: 7px;
     border: 1px solid #0ea5e9;
-    padding: 8px;
+    border-radius: 5px;
 }
 
-.nav-links a:hover {
-    color: #0ea5e9;
-    text-decoration: underline;
-    transform: scale(1.1);
 
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    background: none;
+    border: none;
+    color:#a2a5aa;
+    cursor: pointer;
+    margin-left: auto;
+}
 
+.mobile-menu {
+    display: none;
+    flex-direction: column;
+   
+
+}
+
+.mobile-menu a {
+    padding: 10px;
+    display: block;
+
+    text-decoration: none;
+    color: #a2a5aa;
 }
 
 
@@ -102,10 +129,7 @@ body {
 }
 
 .my-intro {
-
     display: flex;
-    /* justify-content: space-between; */
-    gap: 18px;
     align-items: center;
 }
 
@@ -118,20 +142,20 @@ body {
     font-feature-settings: normal;
     font-variation-settings: normal;
     color: #a2a5aa;
-    /* margin: 0px 44px 0px 0px ; */
+
 }
 
 
 .paragraph p {
 
-    font-size: 45px;
+    font-size: 44px;
     margin: 0px 0px 6px 0px;
 
 }
 
 .flex-div {
     display: flex;
-    gap: 12px;
+    gap: 7px;
 
 
 }
@@ -139,7 +163,6 @@ body {
 .me {
     font-size: 45;
     margin: 0px !important;
-
 }
 
 .name {
@@ -149,17 +172,22 @@ body {
 }
 
 .name::after {
-    content: "Moiz Ahmedd";
+    content: "MOIZ AHMEDD";
     display: inline-block;
     overflow: hidden;
-    border-right: 1px solid #0ea5e9; /* Cursor effect */
+    border-right: 1px solid #0ea5e9;
     white-space: nowrap;
     animation: typing 2s steps(10) infinite alternate;
 }
 
 @keyframes typing {
-    0% { width: 0; }
-    100% { width: 100%; }
+    0% {
+        width: 0;
+    }
+
+    100% {
+        width: 100%;
+    }
 }
 
 
@@ -169,7 +197,7 @@ body {
 
 .code-image img {
     height: 300px;
-    width: 542px;
+    width: 525px;
 }
 
 
@@ -208,14 +236,10 @@ body {
 
 .flex {
     display: flex;
-    gap: 60px;
+    gap: 20px;
     align-items: center;
 }
 
-/* 
-.hello {
-    padding: 0px 0px 0px 20px;
-} */
 
 .hello span {
     font-size: 20px;
@@ -277,7 +301,6 @@ body {
 .profile {
     height: 320px;
     width: 260px;
-    /* border-radius: 10px; */
     margin: 0px 0px 35px 0px;
 }
 
@@ -290,8 +313,7 @@ body {
 
 .image-line {
     border: 3px solid #0ea5e9;
-    /* position: relative; */
-    /* left: 40px; */
+
     height: 350px;
     position: relative;
     bottom: 335px;
@@ -374,7 +396,6 @@ body {
     background-color: #0f172a;
     padding: 10px;
     border: none !important;
-    /* Remove border from body */
     outline: none !important
 }
 
@@ -415,9 +436,6 @@ body {
     margin-top: 220px;
 }
 
-/* .whats-next{ */
-/*  */
-/* } */
 
 .next {
     text-align: center;
@@ -459,15 +477,9 @@ body {
 }
 
 .contact-link a:hover {
-    box-shadow: 0px 0px 5px #0ea5e9;
+    box-shadow: 0px 0px 6px #0ea5e9;
 
 }
-
-
-
-/* .l-g-i-f-links {
-    margin: 0px 0px 3px 0px;
-} */
 
 
 .account-links {
@@ -501,8 +513,6 @@ body {
 
 
 
-
-
 .design-build {
     text-align: center;
     color: #a2a5aa;
@@ -520,40 +530,25 @@ body {
 
 
 @media screen and (max-width: 576px) {
-    .header-section {
-        flex-direction: column;
-        align-items: center;
-        /* gap: 10px; */
-        /* height: auto; */
-        height: 100px;
-        padding: 10px;
+    .menu {
+        display: none;
     }
 
-    .logo p {
-        font-size: 30px;
-        /* Chhoti screens ke liye font size kam kiya */
+    .menu-toggle {
+        display: block;
+    
     }
 
-    .nav-links {
+    .mobile-menu.show {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
+        text-decoration: none;
     }
 
-    .nav-links a {
-        font-size: 14px;
-        /* Font size adjust kiya taake ache se fit ho */
-    }
+    .navbar {
+        flex-direction: row;
+        align-items: center;
+        padding: 7px;
 
-    .Resume {
-        padding: 5px;
-    }
-
-    .container-intro {
-        padding: 10px;
-        margin-top: 20px;
-        text-align: center;
     }
 
     .my-intro {
@@ -563,7 +558,7 @@ body {
 
     .paragraph p {
         font-size: 30px;
-        /* Extra small devices ke liye text size adjust kiya */
+        text-align: center;
     }
 
     .me,
@@ -574,9 +569,7 @@ body {
     .code-image img {
         height: auto;
         width: 100%;
-        /* Image ko responsive banaya */
         max-width: 350px;
-        /* Max width set ki taake screen se bahar na jaye */
     }
 
     .experince p {
@@ -592,15 +585,12 @@ body {
 
     .about-me p {
         font-size: 35px;
-        /* Font size chhota kiya */
         text-align: center;
     }
 
     .flex {
         flex-direction: column;
-        /* Column layout for mobile */
         gap: 20px;
-        /* Kam gap rakha */
         text-align: center;
     }
 
@@ -619,7 +609,7 @@ body {
 
     .list {
         padding-top: 10px;
-        margin: 0px 30px 0px 0px ;
+        margin: 0px 30px 0px 0px;
 
         .footer-section {
             flex-direction: column;
@@ -660,7 +650,6 @@ body {
     .profile {
         height: auto;
         width: 80%;
-        /* Image responsive banayi */
         max-width: 250px;
     }
 
@@ -671,34 +660,27 @@ body {
 
     .image-line {
         display: none;
-        /* Image outline chhoti screens pe hide ki */
     }
 
     .projects-card-parent {
         display: flex;
-        flex-direction: column;
-        /* Cards ko ek ke neeche ek rakha */
+        flex-direction: column;  
         align-items: center;
         gap: 20px;
-        /* Thoda gap diya */
+
     }
 
     .card {
         width: 90%;
-        /* Card ko responsive banaya */
         max-width: 350px;
-        /* Max width di taake zyada wide na ho */
         text-align: center;
-        /* padding: 15px; */
         border-radius: 10px;
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        /* Light shadow for better look */
         background-color: #010a16;
     }
 
     .card-img-top {
         width: 100%;
-        /* Image ko responsive banaya */
         height: auto;
         border-radius: 8px;
     }
@@ -712,12 +694,10 @@ body {
 
     .parent-card-text p {
         font-size: 14px;
-        /* Text size chhota kiya */
     }
 
     .web-year {
         display: flex;
-        /* flex-direction: column; */
         justify-content: space-between;
         align-items: center;
         gap: 5px;
@@ -725,7 +705,6 @@ body {
 
     .web-year a {
         font-size: 16px;
-        /* font-weight: bold; */
         text-decoration: none;
         color: #0ea5e9;
     }
@@ -751,7 +730,6 @@ body {
     }
 
     .account-links {
-        /* flex-direction: column; */
         gap: 10px;
         align-items: center;
     }
