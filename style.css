@@ -41,26 +41,17 @@ body {
     text-decoration: none;
     font-family: Open sans-serif system-ui, 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif;
     ;
-    transition: transform 0.3s ease, color 0.3s ease;
     color: #0ea5e9;
 
 
 }
 
 
-.logo :hover {
+/* .logo :hover {
+    transform: scale(1.4);
+    transition: transform 0.3s ease, color 0.3s ease;
 
-    transform: scale(1.1);
-
-}
-
-.menu {
-    display: flex;
-    gap: 35px;
-    align-items: center;
-    justify-content: space-between;
-
-}
+} */
 
 .menu {
     display: flex;
@@ -102,7 +93,7 @@ body {
     font-size: 24px;
     background: none;
     border: none;
-    color:#a2a5aa;
+    color: #a2a5aa;
     cursor: pointer;
     margin-left: auto;
 }
@@ -110,17 +101,17 @@ body {
 .mobile-menu {
     display: none;
     flex-direction: column;
-   
+
 
 }
 
 .mobile-menu a {
     padding: 10px;
     display: block;
-
     text-decoration: none;
     color: #a2a5aa;
 }
+
 
 
 .container-intro {
@@ -536,18 +527,34 @@ body {
 
     .menu-toggle {
         display: block;
-    
+
     }
 
     .mobile-menu.show {
         display: flex;
         text-decoration: none;
+        transition: transform 0.3s ease, color 0.3s ease;
+        padding: 0px 0px 0px 5px ;
+    }
+
+
+    .mobile-menu a:hover {
+        transform: scale(1.1);
+    }
+
+
+    .mobile-resume{
+        padding: 8px !important;
+        border: 1px solid #0ea5e9;
+        width: 75px;
+        border-radius: 3px;
+
     }
 
     .navbar {
         flex-direction: row;
         align-items: center;
-        padding: 7px;
+        padding: 10px;
 
     }
 
@@ -664,7 +671,7 @@ body {
 
     .projects-card-parent {
         display: flex;
-        flex-direction: column;  
+        flex-direction: column;
         align-items: center;
         gap: 20px;
 
@@ -711,7 +718,7 @@ body {
 
     .web-year p {
         font-size: 14px;
-        color: #a2a5aa;
+        color: #0ea5e9;
     }
 
     .footer-section {
