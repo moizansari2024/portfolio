@@ -111,6 +111,13 @@ body {
     color: #a2a5aa;
 }
 
+.mobile-resume{
+    color: #0ea5e9;
+    border: 1px solid #0ea5e9;
+    padding: 6px 13px 6px 9px !important;
+    border-radius: 4px ;
+    width: 26%;
+}
 
 
 .container-intro {
