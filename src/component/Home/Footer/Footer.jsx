@@ -13,7 +13,7 @@ export default function Footer() {
                         href="https://github.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-all duration-300 hover:scale-125 hover:text-white text-gray-500"
+                        className="transition-all duration-300 hover:scale-125 text-gray-500"
                     >
                         <FaGithub />
                     </a>
@@ -21,7 +21,7 @@ export default function Footer() {
                         href="https://linkedin.com/in/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-all duration-300 hover:scale-125 hover:text-indigo-400 text-gray-500"
+                        className="transition-all duration-300 hover:scale-125  text-gray-500"
                     >
                         <FaLinkedin />
                     </a>
@@ -29,13 +29,13 @@ export default function Footer() {
                         href="https://twitter.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="transition-all duration-300 hover:scale-125 hover:text-blue-400 text-gray-500"
+                        className="transition-all duration-300 hover:scale-125  text-gray-500"
                     >
                         <FaTwitter />
                     </a>
                     <a
                         href="mailto:youremail@example.com"
-                        className="transition-all duration-300 hover:scale-125 hover:text-pink-400 text-gray-500"
+                        className="transition-all duration-300 hover:scale-125  text-gray-500"
                     >
                         <FaEnvelope />
                     </a>
