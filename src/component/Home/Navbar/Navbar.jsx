@@ -1,116 +1,131 @@
-import React, { useState } from "react";
-import { NavLink } from "react-router-dom";
-// import { useTheme } from "../../../context/ThemeContext/ThemeContext";
+import React, { useState, useEffect } from "react";
+
+import { Link } from "react-scroll";
+import { motion, AnimatePresence } from "framer-motion";
+import { HiMenuAlt3, HiX } from "react-icons/hi";
 
 export default function Navbar() {
-  // const { theme, setTheme } = useTheme();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const linkClass = ({ isActive }) =>
-    `block px-3 py-2 rounded-md transition-colors duration-300 ${isActive
-      ? "text-transparent bg-clip-text bg-gradient-to-r from-pink-500 to-indigo-400 font-semibold"
-      : "text-gray-300 hover:text-white hover:bg-white/5"
-    }`;
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  // Styling vahi rakhi hai jo aapki thi
+  const linkClass = "relative px-3 py-2 transition-all duration-300 text-sm font-medium tracking-wide text-gray-400 hover:text-white cursor-pointer group";
 
   return (
-    <nav className="fixed w-full z-50 backdrop-blur bg-black/50 border-b border-white/5">
-      <div className="max-w-6xl mx-auto px-4 flex items-center justify-between h-16">
-        {/* Logo */}
-        <NavLink to="/" className="text-3xl font-bold tracking-wide text-white">
-          Moiz Ahmed
-        </NavLink>
+    <nav
+      className={`fixed w-full z-[100] transition-all duration-500 ${scrolled
+          ? "py-3 bg-black/80 backdrop-blur-xl border-b border-white/10 shadow-2xl"
+          : "py-5 bg-transparent"
+        }`}
+    >
+      <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
+
+        {/* Logo - Scroll to Home */}
+        <Link to="home" smooth={true} duration={500} className="group flex items-center gap-2 cursor-pointer">
+          <span className="text-xl font-bold tracking-tighter text-white uppercase italic">
+            Portfolio
+          </span>
+        </Link>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex items-center gap-4">
-          <NavLink to="/" className={linkClass} end>
-            Home
-          </NavLink>
-          <NavLink to="/about" className={linkClass}>
-            About
-          </NavLink>
-          <NavLink to="/projects" className={linkClass}>
-            Projects
-          </NavLink>
-          <NavLink to="/contact" className={linkClass}>
-            Contact
-          </NavLink>
+        <div className="hidden md:flex items-center gap-8">
+          <div className="flex items-center gap-2">
+            {["Home", "About", "Projects", "Contact"].map((item) => (
+              <Link
+                key={item}
+                to={item.toLowerCase()}
+                smooth={true}
+                duration={500}
+                spy={true}
+                offset={-70}
+                activeClass="text-white active-link" // Active hone par text white hoga
+                className={linkClass}
+              >
+                {item}
+
+                {/* Underline Logic: Hover par bhi dikhegi aur active hone par bhi */}
+                <motion.div
+                  className="absolute bottom-0 left-3 right-3 h-[2px] bg-gradient-to-r from-pink-500 to-indigo-500 scale-x-0 group-hover:scale-x-100 group-[.active-link]:scale-x-100 transition-transform duration-300 origin-center"
+                />
+              </Link>
+            ))}
+          </div>
+
           <a
             href="/resume.pdf"
             download
-            className="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md"
+            className="relative group p-[1.5px] rounded-full overflow-hidden transition-all active:scale-95"
           >
-            Resume
+            <div className="absolute inset-0 bg-gradient-to-r from-pink-500 to-indigo-500 group-hover:opacity-100 transition-opacity" />
+            <div className="relative px-6 py-2 bg-black rounded-full transition-all ">
+              <span className="text-sm font-bold text-white">Resume</span>
+            </div>
           </a>
         </div>
-
-        {/* Theme Toggle Button */}
-        {/* <button
-          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-          className="px-3 py-1 rounded-md border border-white/10 hover:bg-white/5 text-sm text-gray-300 hidden md:block"
-        >
-          {theme === "dark" ? "Light" : "Dark"}
-        </button> */}
 
         {/* Hamburger Button */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="md:hidden text-gray-300 text-2xl focus:outline-none"
+          className="md:hidden text-white text-3xl focus:outline-none z-50 p-2"
         >
-          {menuOpen ? "✕" : "☰"}
+          {menuOpen ? <HiX /> : <HiMenuAlt3 />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
-      {menuOpen && (
-        <div className="md:hidden bg-black/70 backdrop-blur border-t border-white/10 animate-fadeIn">
-          <div className="flex flex-col items-start px-4 py-3 space-y-2">
-            <NavLink to="/" className={linkClass} onClick={() => setMenuOpen(false)} end>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={linkClass} onClick={() => setMenuOpen(false)}>
-              About
-            </NavLink>
-            <NavLink to="/projects" className={linkClass} onClick={() => setMenuOpen(false)}>
-              Projects
-            </NavLink>
-            <NavLink to="/contact" className={linkClass} onClick={() => setMenuOpen(false)}>
-              Contact
-            </NavLink>
-            <a
-              href="/resume.pdf"
-              download
-              className="text-gray-300 hover:text-white hover:bg-white/5 px-3 py-2 rounded-md w-full"
-              onClick={() => setMenuOpen(false)}
-            >
-              Resume
-            </a>
+      {/* Mobile Sidebar */}
+      <AnimatePresence>
+        {menuOpen && (
+          <motion.div
+            initial={{ x: "100%" }}
+            animate={{ x: 0 }}
+            exit={{ x: "100%" }}
+            transition={{ type: "spring", damping: 25, stiffness: 200 }}
+            className="fixed inset-0 h-screen w-full bg-black/95 backdrop-blur-2xl flex flex-col items-center justify-center md:hidden"
+          >
+            <div className="flex flex-col items-center space-y-8">
+              {["Home", "About", "Projects", "Contact"].map((item, index) => (
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  key={item}
+                >
+                  <Link
+                    to={item.toLowerCase()}
+                    smooth={true}
+                    duration={500}
+                    offset={-70}
+                    className="text-4xl font-bold text-gray-400 hover:text-white transition-colors cursor-pointer"
+                    onClick={() => setMenuOpen(false)}
+                  >
+                    {item}
+                  </Link>
+                </motion.div>
+              ))}
 
-            {/* Theme Toggle inside dropdown */}
-            {/* <button
-              onClick={() => {
-                setTheme(theme === "dark" ? "light" : "dark");
-                setMenuOpen(false);
-              }}
-              className="w-full px-3 py-2 rounded-md border border-white/10 hover:bg-white/5 text-sm text-gray-300"
-            >
-              {theme === "dark" ? "Light Mode" : "Dark Mode"}
-            </button> */}
-          </div>
-        </div>
-      )}
-
-      {/* Small animation style */}
-      <style>
-        {`
-          @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(-5px); }
-            to { opacity: 1; transform: translateY(0); }
-          }
-          .animate-fadeIn {
-            animation: fadeIn 0.25s ease-in-out;
-          }
-        `}
-      </style>
+              <motion.a
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ delay: 0.5 }}
+                href="/resume.pdf"
+                download
+                className="mt-4 px-10 py-4 bg-gradient-to-r from-pink-500 to-indigo-500 rounded-full text-white font-bold text-xl"
+                onClick={() => setMenuOpen(false)}
+              >
+                Download Resume
+              </motion.a>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </nav>
   );
 }

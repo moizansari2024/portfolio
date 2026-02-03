@@ -3,15 +3,17 @@ import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
 
 export default function Footer() {
     return (
-        <footer className="backdrop-blur bg-black/70 border-t border-white/10 text-gray-300">
-            <div className="max-w-6xl mx-auto px-4 py-12 flex flex-col items-center text-center">
+        /* CHANGED: bg-black/70 ko bg-transparent kar diya aur backdrop-blur rakha */
+        <footer className="relative z-10 backdrop-blur-md bg-transparent border-t border-white/10 text-gray-300">
+            <div className="max-w-6xl mx-auto px-4 py-10 flex flex-col items-center text-center">
+                
                 {/* Social Links */}
-                <div className="flex gap-6 text-2xl mb-6">
+                <div className="flex gap-8 text-2xl mb-8">
                     <a
                         href="https://github.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white transition-colors"
+                        className="transition-all duration-300 hover:scale-125 hover:text-white text-gray-500"
                     >
                         <FaGithub />
                     </a>
@@ -19,7 +21,7 @@ export default function Footer() {
                         href="https://linkedin.com/in/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white transition-colors"
+                        className="transition-all duration-300 hover:scale-125 hover:text-indigo-400 text-gray-500"
                     >
                         <FaLinkedin />
                     </a>
@@ -27,25 +29,27 @@ export default function Footer() {
                         href="https://twitter.com/yourusername"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-white transition-colors"
+                        className="transition-all duration-300 hover:scale-125 hover:text-blue-400 text-gray-500"
                     >
                         <FaTwitter />
                     </a>
                     <a
                         href="mailto:youremail@example.com"
-                        className="hover:text-white transition-colors"
+                        className="transition-all duration-300 hover:scale-125 hover:text-pink-400 text-gray-500"
                     >
                         <FaEnvelope />
                     </a>
                 </div>
 
                 {/* Divider line */}
-                <div className="w-2/3 border-t border-white/10 mb-4"></div>
+                <div className="w-1/4 border-t border-white/10 mb-6"></div>
 
                 {/* Copyright */}
-                <p className="text-sm text-gray-400">
+                <p className="text-sm text-gray-500 tracking-wide">
                     © {new Date().getFullYear()}{" "}
-                    <span className="text-white font-medium">Moiz Ahmed</span> | All rights reserved.
+                    <span className="text-white font-semibold">MOIZ AHMED</span>
+                    <span className="mx-2">|</span> 
+                    Built with Passion
                 </p>
             </div>
         </footer>

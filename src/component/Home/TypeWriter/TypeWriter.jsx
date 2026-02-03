@@ -2,13 +2,13 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 export default function Typewriter() {
-    const name = "Hi, I’m Moiz Ahmed.";
+    const name = "Moiz Ahmed";
     const [displayText, setDisplayText] = useState("");
     const [index, setIndex] = useState(0);
     const [isDeleting, setIsDeleting] = useState(false);
 
     useEffect(() => {
-        const typingSpeed = isDeleting ? 60 : 120;
+        const typingSpeed = isDeleting ? 50 : 110;
         const timeout = setTimeout(() => {
             if (!isDeleting && index < name.length) {
                 setDisplayText(name.substring(0, index + 1));
@@ -27,38 +27,66 @@ export default function Typewriter() {
     }, [index, isDeleting]);
 
     return (
-        <section className="max-w-6xl mx-auto px-4 py-20">
-            <div>
-                {/* 🧠 Typewriter Heading (fixed height to prevent layout shift) */}
-                <div className="relative h-[70px] flex items-center">
-                    <h1 className="text-4xl sm:text-5xl font-extrabold text-white whitespace-pre">
-                        {displayText}
-                        <span className="border-r-4 border-indigo-500 ml-2 animate-pulse"></span>
-                    </h1>
-                </div>
-
-                {/* ✅ Static text below (no movement) */}
-                <p className="mt-2 text-gray-300 max-w-xl leading-relaxed">
-                    Frontend developer focused on modern, responsive interfaces with clean UI and smooth animations.
+        <section className="max-w-6xl mx-auto px-4 py-8 flex flex-col gap-2">
+            <div className="opacity-0 animate-fadeIn delay-200">
+                <p className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-300">
+                    Hello, I’m
                 </p>
 
-                <div className="mt-6 flex gap-4">
-                    <Link
-                        to="/projects"
-                        className="px-4 py-2 rounded-md bg-white/5 border border-white/10 hover:bg-white/10 transition-all"
-                    >
-                        View Projects
-                    </Link>
-
-                    <a
-                        href="/resume.pdf"
-                        download
-                        className="px-4 py-2 rounded-md border border-white/10 hover:bg-white/10 transition-all"
-                    >
-                        Download Resume
-                    </a>
-                </div>
             </div>
+
+
+            <div className="relative h-[80px] flex items-center opacity-0 animate-fadeIn delay-500">
+                <h1
+                    className="text-3xl sm:text-4xl md:text-6xl font-extrabold whitespace-pre bg-clip-text text-transparent"
+                    style={{ backgroundImage: "linear-gradient(to right, #ec4899, #6366f1)" }}
+                >
+                    {displayText}
+                    <span className="border-r-4 border-indigo-500 ml-2 animate-pulse"></span>
+                </h1>
+            </div>
+
+
+            <p className="mt-2 text-gray-300 max-w-md leading-relaxed break-words">
+                Frontend Developer building responsive, user-friendly web interfaces with React, Tailwind, and smooth animations for modern digital experiences.
+            </p>
+
+
+
+            {/* <div className="mt-6 flex flex-col sm:flex-row sm:gap-4 gap-3 opacity-0 animate-fadeIn delay-800">
+                <Link
+                    to="/projects"
+                    className="px-5 py-3 rounded-md bg-gradient-to-r from-purple-600 to-pink-500 text-gray-300 font-semibold shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:brightness-110"
+                >
+                    View Projects
+                </Link>
+
+                <a
+                    href="/resume.pdf"
+                    download
+                    className="px-5 py-3 rounded-md border border-white/10 text-gray-300 font-semibold shadow-lg transform transition-all duration-300 ease-in-out hover:scale-105 hover:bg-white/10"
+                >
+                    Download Resume
+                </a>
+            </div> */}
+
+
+
+            <style>
+                {`
+          @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+          }
+          .animate-fadeIn {
+            animation: fadeIn 0.8s forwards;
+          }
+          .delay-200 { animation-delay: 0.2s; }
+          .delay-400 { animation-delay: 0.4s; }
+          .delay-600 { animation-delay: 0.6s; }
+          .delay-800 { animation-delay: 0.8s; }
+        `}
+            </style>
         </section>
     );
 }
